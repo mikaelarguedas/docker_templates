@@ -102,7 +102,7 @@ RUN echo "yaml file:///etc/ros/rosdep/@rule_file" | \
     mv temp /etc/ros/rosdep/sources.list.d/20-default.list
 @[    end for]@
 @[  end if]@
-RUN rosdep update
+RUN rosdep update --rosdistro $ROS_DISTRO
 
 @{
 if 'path' not in rosdep:
